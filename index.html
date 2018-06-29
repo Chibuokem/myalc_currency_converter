@@ -1,0 +1,49 @@
+<html>
+
+    <head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <style>
+    
+    </style>
+    <body>
+        <div class="container">
+            <h2 class="text-center alert alert-info">Currency Converter</h2>
+            <form action="">
+            <div class="form-group">
+                <label for="currency_value">Enter your currency value</label>
+                    <input type="text" name="currency_value" id="currency_value" class="form-control" onchange="curr();">
+            </div>
+            <div class="form-group">
+                <select name="curreny_from" id="currency_from" class="form-control">
+                    <option value="" selected>Select Currency</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                    <select name="curreny_to" id="currency_to" class="form-control">
+                        <option value="" selected>Convert to</option>
+    
+                    </select>
+         </div>
+            
+            <button type="button" class="btn btn-large btn-block btn-success"  onclick="curr();">Convert</button>
+              <h4><span id="answer"></span></h4>
+            
+         </form>
+
+        </div>
+
+
+        <script src="database/database1.js"></script>
+        <script src="database/database2.js"></script>
+        <script>
+              if('serviceWorker' in navigator) {
+              navigator.serviceWorker
+                       .register('serviceworker.js')
+                       .then(function() { console.log("Service Worker Registered"); });
+            }
+            </script>
+    </body>
+
+</html>
